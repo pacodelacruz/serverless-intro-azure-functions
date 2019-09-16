@@ -1,0 +1,53 @@
+### Manual tests for REST Client VS Code Extension
+### https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+@localBasePath=http://localhost:7071/
+@afBasePath=https://myfunc.azurewebsites.net/
+
+@basePath={{afBasePath}}
+###
+POST {{basePath}}PostDocument
+
+{
+  "question": "Why are people affraid of computers?",
+  "answer": "They byte!"
+}
+  
+###
+POST {{basePath}}PostDocument
+
+{
+  "question": "Why do Java programmers have to wear glasses?",
+  "answer": "Because they don't C#"
+}
+  
+###
+POST {{basePath}}PostDocument
+
+{
+  "question": "Why was the network admin late to work",
+  "answer": "There was lots of traffic congestion and a collision. It was a hard drive!"
+}
+
+###
+POST {{basePath}}PostDocument
+
+{
+  "question": "What's another name for a computer virus",
+  "answer": "A terminal inllness"
+}
+
+###
+POST {{basePath}}PostDocument
+
+{
+  "question": "How did the PC catch a cold?",
+  "answer": "Someone opened too many Windows"
+}
+
+###
+POST {{basePath}}PostDocument
+
+{
+  "question": "Why did the JavaScipt dev lose their job?",
+  "answer": "They couldn't keep their promises!"
+}
