@@ -15,9 +15,9 @@ namespace ServerlessIntro.Function
                 [CosmosDB("ServerlessIntroDb", "Documents", ConnectionStringSetting = "CosmosDB:ConnectionString")] out dynamic outDocument
                 , ILogger log)
         {
-            log.LogInformation($"ServiceBus queue triggered function");
+            log.LogInformation(new EventId(121), $"ServiceBus queue triggered function");
             outDocument = System.Text.Encoding.Default.GetString(document.Body);
-            log.LogInformation($"Document inserted in CosmosDb collection");
+            log.LogInformation(new EventId(122), $"Document inserted in CosmosDb collection");
         }
     }
 }

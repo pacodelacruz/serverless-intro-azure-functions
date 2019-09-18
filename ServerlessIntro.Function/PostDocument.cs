@@ -21,10 +21,10 @@ namespace ServerlessIntro.Function
                 [ServiceBus("documents", Connection = "ServiceBus:ConnectionString", EntityType = EntityType.Queue)] IAsyncCollector<Message> documentsQueue,
                 ILogger log)
         {
-            log.LogInformation("Document received");
+            log.LogInformation(new EventId(101), "Document received");
             string document = new StreamReader(req.Body).ReadToEnd();
             await documentsQueue.AddAsync(new Message(Encoding.ASCII.GetBytes(document)));
-            log.LogInformation("Document sent to queue");
+            log.LogInformation(new EventId(102), "Document sent to queue");
             return new OkResult();
         }
     }
